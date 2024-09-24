@@ -14,7 +14,8 @@ function Headernav() {
             <Nav.Link href="/">Home</Nav.Link>
             <Nav.Link href='/register'>Register</Nav.Link>
             <Nav.Link href="/about">About</Nav.Link>
-
+            <Nav.Link href="/login">Login</Nav.Link>
+             
             <Nav.Link href="#link">Link</Nav.Link>
             <NavDropdown title="Dropdown" id="basic-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>

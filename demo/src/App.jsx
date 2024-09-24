@@ -11,6 +11,8 @@ function App() {
 const Hpage =lazy(()=>import('./components/homepage') )
 const Aboutpage =lazy(()=>import('./components/aboutpage'))
 const Rpage =lazy(()=>import('./components/registerpage'))
+const Lpage =lazy(()=>import('./components/loginpage'))
+
 
   return (
     <>
@@ -22,6 +24,8 @@ const Rpage =lazy(()=>import('./components/registerpage'))
 
           <Route path='/about' element={<Aboutpage/>}></Route>
           <Route path='/register' element={<Rpage/>}></Route>
+          <Route path='/login' element={<Lpage/>}></Route>
+
 
          </Routes>
          </Suspense>
