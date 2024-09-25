@@ -2,8 +2,12 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-
+import { useContext } from 'react';
+import commentContext from './componentprovider';
+import { Button } from 'react-bootstrap';
 function Headernav() {
+const {comment,setComment}=useContext(commentContext)
+
   return (
     <Navbar expand="lg" style={{backgroundColor:"lightblue"}}>
       <Container>
@@ -28,6 +32,9 @@ function Headernav() {
                 Separated link
               </NavDropdown.Item>
             </NavDropdown>
+            <Button varient='danger' onClick={()=>{
+              setComment("test")
+            }}>Test</Button>
           </Nav>
         </Navbar.Collapse>
       </Container>

@@ -1,4 +1,5 @@
 import './App.css'
+
 import Aboutpage from './components/aboutpage'
 import Cardskerala from './components/cardskerala'
 import Headernav from './components/headernav'
@@ -6,6 +7,7 @@ import Homepage from './components/homepage'
 import Slider from './components/slider'
 import {Routes,Route} from 'react-router-dom'
 import { lazy, Suspense } from 'react'
+import { CommentProvider } from './components/componentprovider'
 
 function App() {
 const Hpage =lazy(()=>import('./components/homepage') )
@@ -15,7 +17,8 @@ const Lpage =lazy(()=>import('./components/loginpage'))
 
 
   return (
-    <>
+  <>
+         <CommentProvider>
          <Headernav/>
          <section>
           <Suspense fallback ={<div>loading....</div>}>
@@ -30,7 +33,8 @@ const Lpage =lazy(()=>import('./components/loginpage'))
          </Routes>
          </Suspense>
         </section>
-    </>
+        </CommentProvider>
+        </>
   )
 }
 
