@@ -14,7 +14,7 @@ import { useContext } from 'react';
 
 function Cardskerala(){
     const [title,setTitle]=useState("")
-    // const {}=useContext(commentContext)
+//  const {comment}=useContext(commentContext)
     const record=[{ idno:1 ,title:'kochi', description:"Kochi (also known as Cochin) is a city in southwest India's coastal Kerala state. It has been a port since 1341, when a flood carved out its harbor and opened it to Arab, Chinese and European merchants. Sites reflecting those influences include Fort Kochi, a settlement with tiled colonial bungalows and diverse houses of worship. Cantilevered Chinese fishing nets, typical of Kochi, have been in use for centuries." ,
         imageUrl:k
     },
