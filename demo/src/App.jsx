@@ -8,6 +8,7 @@ import Slider from './components/slider'
 import {Routes,Route} from 'react-router-dom'
 import { lazy, Suspense } from 'react'
 import { CommentProvider } from './components/componentprovider'
+import ExuseEffect from './components/ex_useEffect'
 
 function App() {
 const Hpage =lazy(()=>import('./components/homepage') )
@@ -15,10 +16,9 @@ const Aboutpage =lazy(()=>import('./components/aboutpage'))
 const Rpage =lazy(()=>import('./components/registerpage'))
 const Lpage =lazy(()=>import('./components/loginpage'))
 
-
   return (
   <>
-         <CommentProvider>
+         {/* <CommentProvider>
          <Headernav/>
          <section>
           <Suspense fallback ={<div>loading....</div>}>
@@ -33,7 +33,9 @@ const Lpage =lazy(()=>import('./components/loginpage'))
          </Routes>
          </Suspense>
         </section>
-        </CommentProvider>
+        </CommentProvider> */}
+       <ExuseEffect/>
+
         </>
   )
 }
