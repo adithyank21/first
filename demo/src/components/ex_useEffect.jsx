@@ -1,54 +1,55 @@
 
-import { useEffect, useState } from "react"
+
+import{useEffect, useState,useRef} from 'react'
 
 function ExuseEffect(){
-   const[count,Setcount] =useState(0)
-   const [value,Setvalue] =useState(0)
-   const [record,setRecord] =useState([])
-   useEffect(()=>{
-    // console.log("useEffect")
+    const [count,setCount] = useState(0)
+    const [value,setvalue] = useState(0)
+
+
+    const [record,setRecord] =useState([])
+    // const refElement =useRef(null)
+useEffect(()=>{
+    console.log("useEffect")
+    // refElement.current['price'].value='1234'
+})
+useEffect(()=>{
     fetch('https://fakestoreapi.com/products')
             .then(res=>res.json())
-            .then(json=>setRecord[json])
-   })
-//    useEffect(()=>
-// {console.log("value")},[value]
-// )
+            .then(json=>{console.log(json);setRecord(json)})
+            // const price=refElement.current;
+            // price['name'].value=record[0].price;
+})
 
     return(
         <>
+        <button onClick={()=>{
+                setCount(count+1)
+            }}>value</button>
         {
-            record.length >0 &&
-            record.map((item) =>
-            {
+            
+            record.length>0 &&
+            record.map((item) =>{
                 return(
-                    <p>
-                        {item.title}
+                
+                    <p key={item.id}>
+                        Title:{item.title}
+                        <img src={item.image} style={{width:'100px', height:'100px'}}></img>
                     </p>
+                    // <input name='price' ref={refElement} type='text' ></input>
+                
                 )
             })
-
         }
-
-        {/* <h1>Hai</h1> */}
-        {/* <button onClick={()=>
-            {
-                Setcount(count+1)
-            }
-        }>Count</button>
+        
+        {/* <button onClick={()=>{
+            setCount(count+1)
+        }}>count</button>
         <p>
-         {count}
-        </p>
-        <button onClick={()=>
-            {
-                Setvalue(value+1)
-            }
-        }>value</button>
-        <p>
-            {value}
+            {count}
         </p> */}
         </>
+        
     )
-
 }
 export default ExuseEffect

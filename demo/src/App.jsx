@@ -9,6 +9,7 @@ import {Routes,Route} from 'react-router-dom'
 import { lazy, Suspense } from 'react'
 import { CommentProvider } from './components/componentprovider'
 import ExuseEffect from './components/ex_useEffect'
+import Usememox from './components/usememo'
 
 function App() {
 const Hpage =lazy(()=>import('./components/homepage') )
@@ -34,7 +35,8 @@ const Lpage =lazy(()=>import('./components/loginpage'))
          </Suspense>
         </section>
         </CommentProvider> */}
-       <ExuseEffect/>
+       {/* <ExuseEffect/> */}
+       <Usememox/>
 
         </>
   )
