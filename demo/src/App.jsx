@@ -10,6 +10,8 @@ import { lazy, Suspense } from 'react'
 import { CommentProvider } from './components/componentprovider'
 import ExuseEffect from './components/ex_useEffect'
 import Usememox from './components/usememo'
+import Usecallbackex from './components/useCallback'
+
 
 function App() {
 const Hpage =lazy(()=>import('./components/homepage') )
@@ -36,8 +38,9 @@ const Lpage =lazy(()=>import('./components/loginpage'))
         </section>
         </CommentProvider> */}
        {/* <ExuseEffect/> */}
-       <Usememox/>
-
+       {/* <Usememox/> */}
+       
+       <Usecallbackex/>
         </>
   )
 }
